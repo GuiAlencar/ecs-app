@@ -50,3 +50,16 @@ service_healthcheck = {
     path = "/healthcheck"
     port = 8080
 }
+
+scale_type = "cpu"
+task_minimun = 3
+task_maximum = 12
+
+### autoscaling de cpu
+scale_out_cpu_threshold = 50
+scale_out_adjustment = 2
+scale_out_comparison_operator = "GreaterThanOrEqualToThreshold"
+scale_out_statistic = "Average"
+scale_out_period = 60
+scale_out_evaluation_periods = 2
+scale_out_cooldown = 60
