@@ -2,7 +2,7 @@ region = "us-east-1"
 
 cluster_name = "linuxtips-ecs-cluster"
 
-service_name = "chip"
+service_name = "linuxtips-app"
 
 service_port = 8080
 
@@ -37,7 +37,7 @@ ssm_private_subnet_3 = "/linuxtips-vpc/vpc/subnet/private_subnet_1c"
 ssm_alb = "/linuxtips/ecs/lb/id"
 
 service_hosts = [
-    "chip.linuxtips.demo"
+    "app.linuxtips.demo"
 ]
 
 environment_variables = [

@@ -1,5 +1,6 @@
 module "service" {
-  source = "/home/guilhermealencar/github/ecs-service-module"
+  # source = "/home/guilhermealencar/github/ecs-service-module"
+  source = "github.com/msfidelis/linuxtips-curso-containers-ecs-service-module?ref=v1.3.0"
   region = var.region
   cluster_name = var.cluster_name
   service_name = var.service_name
@@ -12,6 +13,7 @@ module "service" {
   service_launch_type = var.service_launch_type
   service_task_count = var.service_task_count
   service_hosts = var.service_hosts
+  container_image = var.container_image
   
   environment_variables = var.environment_variables
   capabilities = var.capabilities
